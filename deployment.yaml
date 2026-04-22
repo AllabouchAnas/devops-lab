@@ -12,9 +12,9 @@ spec:
       labels:
         app: webapp
     spec:
-      containers:
-      - name: webapp
-        image: webapp:latest
-        imagePullPolicy: Never
-        ports:
-        - containerPort: 5000
+  containers:
+  - name: webapp
+    image: docker.io/library/webapp:latest # More specific name
+    [cite_start]imagePullPolicy: IfNotPresent # Safer than "Never" 
+    ports:
+    - [cite_start]containerPort: 5000 
